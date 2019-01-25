@@ -1,32 +1,30 @@
----
 
----
 
-# <span id="intro">1 Dashboard介绍</span>
+# Dashboard介绍
 
-dashboard是商业智能仪表盘的简称，它是一般商业智能都拥有的实现数据可视化的模块，是向企业展示度量信息和关键业务指标（KPI）的数据虚拟化工具。dashboard以丰富的，可交互的可视化界面为数据提供更好的使用体验。
+dashboard 是商业智能仪表盘的简称，它是一般商业智能都拥有的实现数据可视化的模块，是向企业展示度量信息和关键业务指标（KPI）的数据虚拟化工具。dashboard 以丰富的，可交互的可视化界面为数据提供更好的使用体验。
 
-# <span id="todo"> 2 Dashboard能做什么</span>
+# Dashboard能做什么
 
-本产品是自由可拖拽式的Dashboard，采用栅格系统的自由可视化布局，内置了几十种可视化图表组件，支持在线和离线的GIS地图应用，图标之间支持相互交互联动，支持图标的自由定制接入，数据的动态刷新，主题的自由切换，且支持skd的二次开发。
+本产品是自由可拖拽式的 Dashboard，采用栅格系统的自由可视化布局，内置了几十种可视化图表组件，支持在线和离线的 GIS 地图应用，图标之间支持相互交互联动，支持图标的自由定制接入，数据的动态刷新，主题的自由切换，且支持 skd 的二次开发。
 
 所以本产品具备统计数据和大数据可视化能力、大屏可视化能力、实时数据可视化能力。在阿坝项目、新疆项目的高危人群预警和画像、食药监、五粮液等项目中均有使用。
 
-# <span id="chart"> 3   自定义图表</span>
+# 自定义图表
 
-##  <span id="chartIntro">3.1 自定义图表介绍</span>
+## 自定义图表介绍
 
-自定义图表为自己代码实现方式的组件，相当于dashboard的扩展接口组件，可实现各种图标，如水球图，折线图饼图的混合图等，并且提供接入数据功能，可与其他组件形成联动与被联动关系。
+自定义图表为自己代码实现方式的组件，相当于 dashboard 的扩展接口组件，可实现各种图标，如水球图，折线图饼图的混合图等，并且提供接入数据功能，可与其他组件形成联动与被联动关系。
 
-## <span id="whattodo">3.2 自定义图表能做什么</span>
+## 自定义图表能做什么
 
 当仪表盘内置图表组件或者内置组件的展示方式不符合需求的时候，可根据需要按照开发手册写出自己想要的图表，并且实现想要的图表逻辑和展示方式。
 
-## <span id="howDev">3.3 如何开发一个图表</span>
+## 如何开发一个图表
 
-1、打开dashboard界面，拖拽左边自定义图表组件进入中间画布区域。
+1、打开 dashboard 界面，拖拽左边自定义图表组件进入中间画布区域。
 
-![image002 (1)](https://raw.githubusercontent.com/turingsoul/XDT-DOC/master/xdt/devDoc/_book/img/image002%20(1).jpg)
+![JPG](img/1.jpg)
 
 2、选中画布区域的自定义组件。
 
@@ -34,45 +32,41 @@ dashboard是商业智能仪表盘的简称，它是一般商业智能都拥有�
 
 4、定义数据源，并且点击获取数据按钮，(ps:缓存数据查询)。如不需要绑定数据，可不用填写。
 
-
-
-![image004](https://raw.githubusercontent.com/turingsoul/XDT-DOC/master/xdt/devDoc/_book/img/image004.jpg)
+![JPG](img/2.jpg)
 
 5、切换到样式选项，查看或者编写自定义代码。下面是一个自定义折线图的代码解析
 
-![image006](https://raw.githubusercontent.com/turingsoul/XDT-DOC/master/xdt/devDoc/img/image006.jpg)
+![JPG](img/3.jpg)
 
 6、点击立即执行（重要），此时代码运行并且代码保存到数据中；
 
-##  <span id="case">3.4 案例：水球图</span>
+## 案例：水球图
 
-![image008](https://raw.githubusercontent.com/turingsoul/XDT-DOC/master/xdt/devDoc/img/image008.jpg)
-
- 
+![JPG](img/4.jpg)
 
 在当前选中的自定义图表的自定义代码中写入
 
-a)         如需获取数据，则加入获取数据代码
+a) 如需获取数据，则加入获取数据代码
 
-```
-//data是获取的数据
+```javascript
+//data 是获取的数据
 var data = this.cfg.chartDefinition.data;
 if(!data || !data.resultset){
-    return false;
+return false;
 }
 ```
 
-b)         获取当前的echarts插件并且设置为全局属性(因为引入的水球图插件需要使用全局的echarts对象)
+b) 获取当前的 echarts 插件并且设置为全局属性(因为引入的水球图插件需要使用全局的 echarts 对象)
 
-```
+```javascript
 //dashboard内置echarts，用按如下方式使用：
 var echarts = arguments[0];
 window.echarts = echarts;
 ```
 
-c)         引入水球图的插件，并保存在变量one中
+c) 引入水球图的插件，并保存在变量 one 中
 
-```
+```javascript
 //引入水球图插件
 var one = Dashboard.queryAction.getScriptOne({
     name:"liquidfill",
@@ -80,17 +74,17 @@ var one = Dashboard.queryAction.getScriptOne({
 });
 ```
 
-d)         重置echarts实例
+d) 重置 echarts 实例
 
-```
+```javascript
 var echartsInstance = this.echartsInstance || echarts.init(this.htmlObj);
 echartsInstance.dispose();
 echartsInstance = echarts.init(this.htmlObj);
 ```
 
-e)         定义echarts所需option
+e) 定义 echarts 所需 option
 
-```
+```javascript
 var option = {
     series:[{
         type:'liquidFill',
@@ -109,17 +103,17 @@ var option = {
 }
 ```
 
-f)          当插件加载完成时就渲染图表
+f) 当插件加载完成时就渲染图表
 
-```
+```javascript
 one.then(function(){
     echartsInstance.setOption(option);
 });
 ```
 
-g)         编写resize代码
+g) 编写 resize 代码
 
-```
+```javascript
 this.resize = function(){
     echartsInstance.clear();
     echartsInstance.resize();
@@ -127,9 +121,9 @@ this.resize = function(){
 }
 ```
 
-## 3.5<span id="caseCode"> 案例代码</span>
+## 案例代码
 
-```
+```javascript
 //data 是 获取的数据
 
 var data = this.cfg.chartDefinition.data;
@@ -194,7 +188,7 @@ echartsInstance.dispose();
 
 echartsInstance = echarts.init(this.htmlObj);
 
- 
+
 
 this.resize = function() {
 
@@ -212,4 +206,3 @@ one.then(function(){
 
 });
 ```
-
