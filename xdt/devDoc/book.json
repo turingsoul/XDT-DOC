@@ -84,8 +84,8 @@
     "donate": {
       "wechat": "./img/pay.jpg",
       "title": "",
-      "button": "赏",
-      "wechatText": "微信打赏"
+      "button": "联系作者",
+      "wechatText": "18380464736"
     },
     "simple-page-toc": {
       "maxDepth": 3,
