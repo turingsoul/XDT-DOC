@@ -1,9 +1,8 @@
 # Summary
 
-* [Introduction](README.md)
-* [前言](mdfile/前言/README.md)
-    * [编写目的](mdfile/前言/README.md#编写目的)
-    * [适用对象](mdfile/前言/README.md#适用对象)
+* [前言](README.md)
+    * [编写目的](README.md#编写目的)
+    * [适用对象](README.md#适用对象)
 * [产品简介](mdfile/产品简介/README.md)
 * [产品术语表](mdfile/产品术语表/README.md)
 * [登录系统](mdfile/登录系统/README.md)
