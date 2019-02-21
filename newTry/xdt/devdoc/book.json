@@ -1,0 +1,93 @@
+﻿{
+  "author": "yanhuinan",
+  "description": "...",
+  "extension": null,
+  "generator": "site",
+  "title": "xdatainsight",
+  "variables": {},
+  "links": {
+    "sharing": {
+      "all": false,
+      "facebook": false,
+      "google": false,
+      "twitter": false,
+      "weibo": false
+    }
+  },
+  "styles": {
+    "website": "styles/website.css"
+  },
+  "output": null,
+  "pdf": {
+    "fontSize": 12,
+    "footerTemplate": null,
+    "headerTemplate": null,
+    "margin": {
+      "bottom": 36,
+      "left": 62,
+      "right": 62,
+      "top": 36
+    },
+    "pageNumbers": false,
+    "paperSize": "a4"
+  },
+  "plugins": [
+    "splitter@^0.0.8",
+    "-lunr",
+    "-search",
+    "search-plus",
+    "-livereload",
+    "theme-comscore",
+    "katex@^1.1.3",
+    "prism@^2.1.0",
+    "prism-themes@^0.0.2",
+    "include-codeblock@^3.0.2",
+    "ace@^0.3.2",
+    "advanced-emoji@^0.2.1",
+    "emphasize@^1.1.0",
+    "mermaid-gb3@2.1.0",
+    "expandable-chapters-small@^0.1.7",
+    "favicon",
+    "todo@^0.1.3",
+    "terminal@^0.3.2",
+    "alerts@^0.2.0",
+    "include-csv@^0.1.0",
+    "markdown-video",
+    "embed-pdf",
+    "chart@^0.2.0"
+  ],
+  "pluginsConfig": {
+    "theme-default": {
+      "showLevel": true
+    },
+    "prism": {
+      "css": ["prism-themes/themes/prism-base16-ateliersulphurpool.light.css"]
+    },
+    "include-codeblock": {
+      "template": "ace",
+      "unindent": true,
+      "edit": true
+    },
+    "tbfed-pagefooter": {
+      "copyright": "Copyright © 项目组 2018",
+      "modify_label": "该文件修订时间：",
+      "modify_format": "YYYY-MM-DD HH:mm:ss"
+    },
+    "simple-page-toc": {
+      "maxDepth": 3,
+      "skipFirstH1": true
+    },
+    "sectionx": {
+      "tag": "b"
+    },
+    "favicon": {
+      "shortcut": "img/smallLogo.ico",
+      "bookmark": "img/smallLogo.ico"
+    },
+    "terminal": {
+      "copyButtons": true,
+      "fade": false,
+      "style": "flat"
+    }
+  }
+}

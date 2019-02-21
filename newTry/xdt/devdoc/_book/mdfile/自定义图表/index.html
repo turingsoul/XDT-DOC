@@ -1,0 +1,589 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>自定义图表 · xdatainsight</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="yanhuinan">
+        
+        
+    
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-base16-ateliersulphurpool.light.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-terminal/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-markdown-video/video-js.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+
+
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="./" />
+    
+    
+    <link rel="prev" href="../dashboard能做什么/" />
+    
+
+    
+    <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chart/c3/c3.min.css">
+    <script src="../../gitbook/gitbook-plugin-chart/c3/d3.min.js"></script>
+    <script src="../../gitbook/gitbook-plugin-chart/c3/c3.min.js"></script>
+    
+
+    
+        <link rel="shortcut icon" href='../../img/smallLogo.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../../img/smallLogo.ico' type="image/x-icon">
+    
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    Dashboard介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../dashboard能做什么/">
+            
+                <a href="../dashboard能做什么/">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    Dashboard能做什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    自定义图表
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="./">
+            
+                <a href="./#自定义图表介绍">
+            
+                    
+                        <b>1.3.1.</b>
+                    
+                    自定义图表介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="./">
+            
+                <a href="./#自定义图表能做什么">
+            
+                    
+                        <b>1.3.2.</b>
+                    
+                    自定义图表能做什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="./">
+            
+                <a href="./#如何开发一个图表">
+            
+                    
+                        <b>1.3.3.</b>
+                    
+                    如何开发一个图表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="./">
+            
+                <a href="./#案例：水球图">
+            
+                    
+                        <b>1.3.4.</b>
+                    
+                    案例：水球图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="./">
+            
+                <a href="./#案例代码">
+            
+                    
+                        <b>1.3.5.</b>
+                    
+                    案例代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >自定义图表</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x81EA;&#x5B9A;&#x4E49;&#x56FE;&#x8868;">&#x81EA;&#x5B9A;&#x4E49;&#x56FE;&#x8868;</h1>
+<h2 id="&#x81EA;&#x5B9A;&#x4E49;&#x56FE;&#x8868;&#x4ECB;&#x7ECD;">&#x81EA;&#x5B9A;&#x4E49;&#x56FE;&#x8868;&#x4ECB;&#x7ECD;</h2>
+<p>&#x81EA;&#x5B9A;&#x4E49;&#x56FE;&#x8868;&#x4E3A;&#x81EA;&#x5DF1;&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&#x7684;&#x7EC4;&#x4EF6;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E; dashboard &#x7684;&#x6269;&#x5C55;&#x63A5;&#x53E3;&#x7EC4;&#x4EF6;&#xFF0C;&#x53EF;&#x5B9E;&#x73B0;&#x5404;&#x79CD;&#x56FE;&#x6807;&#xFF0C;&#x5982;&#x6C34;&#x7403;&#x56FE;&#xFF0C;&#x6298;&#x7EBF;&#x56FE;&#x997C;&#x56FE;&#x7684;&#x6DF7;&#x5408;&#x56FE;&#x7B49;&#xFF0C;&#x5E76;&#x4E14;&#x63D0;&#x4F9B;&#x63A5;&#x5165;&#x6570;&#x636E;&#x529F;&#x80FD;&#xFF0C;&#x53EF;&#x4E0E;&#x5176;&#x4ED6;&#x7EC4;&#x4EF6;&#x5F62;&#x6210;&#x8054;&#x52A8;&#x4E0E;&#x88AB;&#x8054;&#x52A8;&#x5173;&#x7CFB;&#x3002;</p>
+<h2 id="&#x81EA;&#x5B9A;&#x4E49;&#x56FE;&#x8868;&#x80FD;&#x505A;&#x4EC0;&#x4E48;">&#x81EA;&#x5B9A;&#x4E49;&#x56FE;&#x8868;&#x80FD;&#x505A;&#x4EC0;&#x4E48;</h2>
+<p>&#x5F53;&#x4EEA;&#x8868;&#x76D8;&#x5185;&#x7F6E;&#x56FE;&#x8868;&#x7EC4;&#x4EF6;&#x6216;&#x8005;&#x5185;&#x7F6E;&#x7EC4;&#x4EF6;&#x7684;&#x5C55;&#x793A;&#x65B9;&#x5F0F;&#x4E0D;&#x7B26;&#x5408;&#x9700;&#x6C42;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53EF;&#x6839;&#x636E;&#x9700;&#x8981;&#x6309;&#x7167;&#x5F00;&#x53D1;&#x624B;&#x518C;&#x5199;&#x51FA;&#x81EA;&#x5DF1;&#x60F3;&#x8981;&#x7684;&#x56FE;&#x8868;&#xFF0C;&#x5E76;&#x4E14;&#x5B9E;&#x73B0;&#x60F3;&#x8981;&#x7684;&#x56FE;&#x8868;&#x903B;&#x8F91;&#x548C;&#x5C55;&#x793A;&#x65B9;&#x5F0F;&#x3002;</p>
+<h2 id="&#x5982;&#x4F55;&#x5F00;&#x53D1;&#x4E00;&#x4E2A;&#x56FE;&#x8868;">&#x5982;&#x4F55;&#x5F00;&#x53D1;&#x4E00;&#x4E2A;&#x56FE;&#x8868;</h2>
+<p>1&#x3001;&#x6253;&#x5F00; dashboard &#x754C;&#x9762;&#xFF0C;&#x62D6;&#x62FD;&#x5DE6;&#x8FB9;&#x81EA;&#x5B9A;&#x4E49;&#x56FE;&#x8868;&#x7EC4;&#x4EF6;&#x8FDB;&#x5165;&#x4E2D;&#x95F4;&#x753B;&#x5E03;&#x533A;&#x57DF;&#x3002;</p>
+<p><img src="../../img/1.jpg" alt="JPG"></p>
+<p>2&#x3001;&#x9009;&#x4E2D;&#x753B;&#x5E03;&#x533A;&#x57DF;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x3002;</p>
+<p>3&#x3001;&#x5728;&#x7EC4;&#x4EF6;&#x5DE6;&#x8FB9;&#x6839;&#x636E;&#x9700;&#x8981;&#x914D;&#x7F6E;&#x6570;&#x636E;&#x6E90;(&#x53EF;&#x4EE5;&#x4E0D;&#x914D;&#x7F6E;)</p>
+<p>4&#x3001;&#x5B9A;&#x4E49;&#x6570;&#x636E;&#x6E90;&#xFF0C;&#x5E76;&#x4E14;&#x70B9;&#x51FB;&#x83B7;&#x53D6;&#x6570;&#x636E;&#x6309;&#x94AE;&#xFF0C;(ps:&#x7F13;&#x5B58;&#x6570;&#x636E;&#x67E5;&#x8BE2;)&#x3002;&#x5982;&#x4E0D;&#x9700;&#x8981;&#x7ED1;&#x5B9A;&#x6570;&#x636E;&#xFF0C;&#x53EF;&#x4E0D;&#x7528;&#x586B;&#x5199;&#x3002;</p>
+<p><img src="../../img/2.jpg" alt="JPG"></p>
+<p>5&#x3001;&#x5207;&#x6362;&#x5230;&#x6837;&#x5F0F;&#x9009;&#x9879;&#xFF0C;&#x67E5;&#x770B;&#x6216;&#x8005;&#x7F16;&#x5199;&#x81EA;&#x5B9A;&#x4E49;&#x4EE3;&#x7801;&#x3002;&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x6298;&#x7EBF;&#x56FE;&#x7684;&#x4EE3;&#x7801;&#x89E3;&#x6790;</p>
+<p><img src="../../img/3.jpg" alt="JPG"></p>
+<p>6&#x3001;&#x70B9;&#x51FB;&#x7ACB;&#x5373;&#x6267;&#x884C;&#xFF08;&#x91CD;&#x8981;&#xFF09;&#xFF0C;&#x6B64;&#x65F6;&#x4EE3;&#x7801;&#x8FD0;&#x884C;&#x5E76;&#x4E14;&#x4EE3;&#x7801;&#x4FDD;&#x5B58;&#x5230;&#x6570;&#x636E;&#x4E2D;&#xFF1B;</p>
+<h2 id="&#x6848;&#x4F8B;&#xFF1A;&#x6C34;&#x7403;&#x56FE;">&#x6848;&#x4F8B;&#xFF1A;&#x6C34;&#x7403;&#x56FE;</h2>
+<p><img src="../../img/4.jpg" alt="JPG"></p>
+<p>&#x5728;&#x5F53;&#x524D;&#x9009;&#x4E2D;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x56FE;&#x8868;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x4EE3;&#x7801;&#x4E2D;&#x5199;&#x5165;</p>
+<p>a) &#x5982;&#x9700;&#x83B7;&#x53D6;&#x6570;&#x636E;&#xFF0C;&#x5219;&#x52A0;&#x5165;&#x83B7;&#x53D6;&#x6570;&#x636E;&#x4EE3;&#x7801;</p>
+<pre class="language-"><code class="lang-javascript"><span class="token comment">//data &#x662F;&#x83B7;&#x53D6;&#x7684;&#x6570;&#x636E;</span>
+<span class="token keyword">var</span> data <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>cfg<span class="token punctuation">.</span>chartDefinition<span class="token punctuation">.</span>data<span class="token punctuation">;</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>data <span class="token operator">||</span> <span class="token operator">!</span>data<span class="token punctuation">.</span>resultset<span class="token punctuation">)</span><span class="token punctuation">{</span>
+<span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>b) &#x83B7;&#x53D6;&#x5F53;&#x524D;&#x7684; echarts &#x63D2;&#x4EF6;&#x5E76;&#x4E14;&#x8BBE;&#x7F6E;&#x4E3A;&#x5168;&#x5C40;&#x5C5E;&#x6027;(&#x56E0;&#x4E3A;&#x5F15;&#x5165;&#x7684;&#x6C34;&#x7403;&#x56FE;&#x63D2;&#x4EF6;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x5168;&#x5C40;&#x7684; echarts &#x5BF9;&#x8C61;)</p>
+<pre class="language-"><code class="lang-javascript"><span class="token comment">//dashboard&#x5185;&#x7F6E;echarts&#xFF0C;&#x7528;&#x6309;&#x5982;&#x4E0B;&#x65B9;&#x5F0F;&#x4F7F;&#x7528;&#xFF1A;</span>
+<span class="token keyword">var</span> echarts <span class="token operator">=</span> arguments<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+window<span class="token punctuation">.</span>echarts <span class="token operator">=</span> echarts<span class="token punctuation">;</span>
+</code></pre>
+<p>c) &#x5F15;&#x5165;&#x6C34;&#x7403;&#x56FE;&#x7684;&#x63D2;&#x4EF6;&#xFF0C;&#x5E76;&#x4FDD;&#x5B58;&#x5728;&#x53D8;&#x91CF; one &#x4E2D;</p>
+<pre class="language-"><code class="lang-javascript"><span class="token comment">//&#x5F15;&#x5165;&#x6C34;&#x7403;&#x56FE;&#x63D2;&#x4EF6;</span>
+<span class="token keyword">var</span> one <span class="token operator">=</span> Dashboard<span class="token punctuation">.</span>queryAction<span class="token punctuation">.</span><span class="token function">getScriptOne</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    name<span class="token punctuation">:</span><span class="token string">&quot;liquidfill&quot;</span><span class="token punctuation">,</span>
+    src<span class="token punctuation">:</span><span class="token string">&apos;http://echarts.baidu.com/resource/echarts-liquidfill-1.0.4/dist/echarts-liquidfill.js&apos;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>d) &#x91CD;&#x7F6E; echarts &#x5B9E;&#x4F8B;</p>
+<pre class="language-"><code class="lang-javascript"><span class="token keyword">var</span> echartsInstance <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>echartsInstance <span class="token operator">||</span> echarts<span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>htmlObj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+echartsInstance<span class="token punctuation">.</span><span class="token function">dispose</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+echartsInstance <span class="token operator">=</span> echarts<span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>htmlObj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>e) &#x5B9A;&#x4E49; echarts &#x6240;&#x9700; option</p>
+<pre class="language-"><code class="lang-javascript"><span class="token keyword">var</span> option <span class="token operator">=</span> <span class="token punctuation">{</span>
+    series<span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token punctuation">{</span>
+        type<span class="token punctuation">:</span><span class="token string">&apos;liquidFill&apos;</span><span class="token punctuation">,</span>
+        radius<span class="token punctuation">:</span><span class="token string">&apos;80%&apos;</span><span class="token punctuation">,</span>
+        data<span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token number">0.5</span><span class="token punctuation">,</span><span class="token number">0.45</span><span class="token punctuation">,</span><span class="token number">0.4</span><span class="token punctuation">,</span><span class="token number">0.3</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        label<span class="token punctuation">:</span><span class="token punctuation">{</span>
+            normal<span class="token punctuation">:</span><span class="token punctuation">{</span>
+                textStyle<span class="token punctuation">:</span><span class="token punctuation">{</span>
+                    color<span class="token punctuation">:</span><span class="token string">&apos;red&apos;</span><span class="token punctuation">,</span>
+                    insideColor<span class="token punctuation">:</span><span class="token string">&apos;yellow&apos;</span><span class="token punctuation">,</span>
+                    fontSize<span class="token punctuation">:</span><span class="token number">50</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>f) &#x5F53;&#x63D2;&#x4EF6;&#x52A0;&#x8F7D;&#x5B8C;&#x6210;&#x65F6;&#x5C31;&#x6E32;&#x67D3;&#x56FE;&#x8868;</p>
+<pre class="language-"><code class="lang-javascript">one<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    echartsInstance<span class="token punctuation">.</span><span class="token function">setOption</span><span class="token punctuation">(</span>option<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>g) &#x7F16;&#x5199; resize &#x4EE3;&#x7801;</p>
+<pre class="language-"><code class="lang-javascript"><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function-variable function">resize</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    echartsInstance<span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    echartsInstance<span class="token punctuation">.</span><span class="token function">resize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    echartsInstance<span class="token punctuation">.</span><span class="token function">setOption</span><span class="token punctuation">(</span>option<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="&#x6848;&#x4F8B;&#x4EE3;&#x7801;">&#x6848;&#x4F8B;&#x4EE3;&#x7801;</h2>
+<pre class="language-"><code class="lang-javascript"><span class="token comment">//data &#x662F; &#x83B7;&#x53D6;&#x7684;&#x6570;&#x636E;</span>
+
+<span class="token keyword">var</span> data <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>cfg<span class="token punctuation">.</span>chartDefinition<span class="token punctuation">.</span>data<span class="token punctuation">;</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>data <span class="token operator">||</span> <span class="token operator">!</span>data<span class="token punctuation">.</span>resultset<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span>
+
+<span class="token comment">//dashboard &#x5185;&#x7F6E;echarts &#xFF0C;&#x7528;&#x6309;&#x5982;&#x4E0B;&#x65B9;&#x5F0F;&#x4F7F;&#x7528;&#xFF1B;</span>
+
+<span class="token keyword">var</span> echarts <span class="token operator">=</span> arguments<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+window<span class="token punctuation">.</span>echarts <span class="token operator">=</span> echarts<span class="token punctuation">;</span>
+
+<span class="token comment">//&#x5F15;&#x5165;&#x6C34;&#x7403;&#x56FE;&#x63D2;&#x4EF6;</span>
+
+<span class="token keyword">var</span> one <span class="token operator">=</span> Dashboard<span class="token punctuation">.</span>queryAction<span class="token punctuation">.</span><span class="token function">getScriptOnce</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+
+    name<span class="token punctuation">:</span> <span class="token string">&apos;liquidfill&apos;</span><span class="token punctuation">,</span>
+
+    src<span class="token punctuation">:</span> <span class="token string">&apos;http://echarts.baidu.com/resource/echarts-liquidfill-1.0.4/dist/echarts-liquidfill.js&apos;</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> option <span class="token operator">=</span> <span class="token punctuation">{</span>
+
+    series<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+
+        type<span class="token punctuation">:</span> <span class="token string">&apos;liquidFill&apos;</span><span class="token punctuation">,</span>
+
+        radius<span class="token punctuation">:</span> <span class="token string">&apos;80%&apos;</span><span class="token punctuation">,</span>
+
+        data<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token number">0.5</span><span class="token punctuation">,</span> <span class="token number">0.45</span><span class="token punctuation">,</span> <span class="token number">0.4</span><span class="token punctuation">,</span> <span class="token number">0.3</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+
+        label<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+
+            normal<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+
+                textStyle<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+
+                    color<span class="token punctuation">:</span> <span class="token string">&apos;red&apos;</span><span class="token punctuation">,</span>
+
+                    insideColor<span class="token punctuation">:</span> <span class="token string">&apos;yellow&apos;</span><span class="token punctuation">,</span>
+
+                    fontSize<span class="token punctuation">:</span> <span class="token number">50</span>
+
+                <span class="token punctuation">}</span>
+
+            <span class="token punctuation">}</span>
+
+        <span class="token punctuation">}</span>
+
+    <span class="token punctuation">}</span><span class="token punctuation">]</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> echartsInstance <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>echartsInstance <span class="token operator">||</span> echarts<span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>htmlObj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+echartsInstance<span class="token punctuation">.</span><span class="token function">dispose</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+echartsInstance <span class="token operator">=</span> echarts<span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>htmlObj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+
+<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function-variable function">resize</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    echartsInstance<span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    echartsInstance<span class="token punctuation">.</span><span class="token function">resize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    echartsInstance<span class="token punctuation">.</span><span class="token function">setOption</span><span class="token punctuation">(</span>option<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+one<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+    echartsInstance<span class="token punctuation">.</span><span class="token function">setOption</span><span class="token punctuation">(</span>option<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../dashboard能做什么/" class="navigation navigation-prev " aria-label="Previous page: Dashboard能做什么">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="./#自定义图表介绍" class="navigation navigation-next " aria-label="Next page: 自定义图表介绍">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"自定义图表","level":"1.3","depth":1,"next":{"title":"自定义图表介绍","level":"1.3.1","depth":2,"anchor":"#自定义图表介绍","path":"mdfile/自定义图表/README.md","ref":"mdfile/自定义图表/README.md#自定义图表介绍","articles":[]},"previous":{"title":"Dashboard能做什么","level":"1.2","depth":1,"path":"mdfile/dashboard能做什么/README.md","ref":"mdfile/dashboard能做什么/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["splitter@^0.0.8","-lunr","-search","search-plus","-livereload","theme-comscore","katex@^1.1.3","prism@^2.1.0","prism-themes@^0.0.2","include-codeblock@^3.0.2","ace@^0.3.2","advanced-emoji@^0.2.1","emphasize@^1.1.0","mermaid-gb3@2.1.0","expandable-chapters-small@^0.1.7","favicon","todo@^0.1.3","terminal@^0.3.2","alerts@^0.2.0","include-csv@^0.1.0","markdown-video","embed-pdf","chart@^0.2.0"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © 项目组 2018","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-base16-ateliersulphurpool.light.css"]},"include-csv":{},"emphasize":{},"ace":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"todo":{},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"highlight":{},"mermaid-gb3":{},"favicon":{"shortcut":"img/smallLogo.ico","bookmark":"img/smallLogo.ico"},"theme-comscore":{},"prism-themes":{},"alerts":{},"expandable-chapters-small":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":true,"fixlang":false,"lang":"","template":"ace","theme":"chrome","unindent":true},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"terminal":{"copyButtons":true,"fade":false,"style":"flat"},"markdown-video":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"chart":{"type":"c3"},"embed-pdf":{},"search-plus":{}},"theme":"default","author":"yanhuinan","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"xdatainsight","links":{"sharing":{"all":false,"facebook":false,"google":false,"twitter":false,"weibo":false}},"gitbook":"*","description":"...","extension":null},"file":{"path":"mdfile/自定义图表/README.md","mtime":"2019-02-21T03:19:33.569Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-21T03:40:12.666Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-terminal/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-markdown-video/video.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    <script src="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+
